@@ -4,10 +4,10 @@ import { AutoScroll } from "@splidejs/splide-extension-auto-scroll";
 import "@splidejs/splide/dist/css/splide.min.css"; // Pastikan untuk mengimpor CSS Splide
 import { useEffect } from "react";
 import { FacebookOutlined, GTranslate, PlayCircleFilled, ApiOutlined } from "@mui/icons-material";
+import { partners } from "../../datas";
 
 export default function Brands() {
   useEffect(() => {
-    // Inisialisasi Splide setelah komponen dirender
     new Splide(".splide", {
       type: "loop",
       drag: "free",
@@ -20,17 +20,6 @@ export default function Brands() {
       },
     }).mount({ AutoScroll });
   }, []);
-
-  interface TempItem {
-    icon: JSX.Element | any;
-    title: string;
-  }
-  const temp: TempItem[] = [
-    { icon: <FacebookOutlined />, title: "FaceBuku" },
-    { icon: <GTranslate />, title: "Gugel Translate" },
-    { icon: <PlayCircleFilled />, title: "yusubs" },
-    { icon: <ApiOutlined />, title: "Bandung Lautan API" },
-  ];
 
   return (
     <Container maxWidth="xl" component="section" sx={{ mt: 6 }}>
@@ -50,7 +39,7 @@ export default function Brands() {
       <Box mt={6} className="splide">
         <div className="splide__track">
           <ul className="splide__list">
-            {temp.map((item) => (
+            {partners.map((item) => (
               <Box className="splide__slide" key={item.title} display="flex" justifyContent="center" alignItems="center" gap={2}>
                 {item.icon}
                 <p>{item.title}</p>
@@ -62,3 +51,6 @@ export default function Brands() {
     </Container>
   );
 }
+
+// Thanks to
+// https://codepen.io/HackyG/pen/WNmReYd

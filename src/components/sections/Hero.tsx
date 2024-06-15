@@ -16,7 +16,7 @@ export default function Hero() {
               top freelancers signed up last week
             </Typography>
           </Box>
-          <Typography variant="h2" component="h1" fontSize="64px">
+          <Typography variant="h2" component="h1" fontSize="68px">
             Clients Analytics
             <br /> for Freelancer
           </Typography>

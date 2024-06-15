@@ -2,6 +2,7 @@ import { Box, Button, Container, Grid, Typography } from "@mui/material";
 import Images from "../../constants/Images";
 import { useState } from "react";
 import { CheckCircleOutlined, PlayCircleFilledOutlined } from "@mui/icons-material";
+import { HowItWorksData } from "../../datas";
 
 const images = [Images.watch1, Images.watch2, Images.watch3, Images.watch4];
 const ayangs = [Images.ayang1, Images.ayang2, Images.ayang3];
@@ -57,37 +58,16 @@ export default function HowItWorks() {
             We designed a lot of features that can applied
             <br /> automatically so you do not have to run.
           </Typography>
+
           <Box component="ul" display="flex" flexDirection="column" gap={2}>
-            <Box component="li" display="flex" alignItems="center" gap={1}>
-              <CheckCircleOutlined color="secondary" />
-              <Typography variant="h6" component="h3" fontWeight="bold">
-                Auto running when reaches certain number
-              </Typography>
-            </Box>
-            <Box component="li" display="flex" alignItems="center" gap={1}>
-              <CheckCircleOutlined color="secondary" />
-              <Typography variant="h6" component="h3" fontWeight="bold">
-                Calling backup when you overwhelmed
-              </Typography>
-            </Box>
-            <Box component="li" display="flex" alignItems="center" gap={1}>
-              <CheckCircleOutlined color="secondary" />
-              <Typography variant="h6" component="h3" fontWeight="bold">
-                Sending invoices to client completed projects
-              </Typography>
-            </Box>
-            <Box component="li" display="flex" alignItems="center" gap={1}>
-              <CheckCircleOutlined color="secondary" />
-              <Typography variant="h6" component="h3" fontWeight="bold">
-                Turn off tracker when the client not agree
-              </Typography>
-            </Box>
-            <Box component="li" display="flex" alignItems="center" gap={1}>
-              <CheckCircleOutlined color="secondary" />
-              <Typography variant="h6" component="h3" fontWeight="bold">
-                More great features coming soon
-              </Typography>
-            </Box>
+            {HowItWorksData.map((item, index) => (
+              <Box key={index} component="li" display="flex" alignItems="center" gap={1}>
+                <CheckCircleOutlined color="secondary" />
+                <Typography variant="h5" component="h3" fontWeight="bold">
+                  {item}
+                </Typography>
+              </Box>
+            ))}
           </Box>
 
           <Box display="flex" alignItems="center" gap={2}>
