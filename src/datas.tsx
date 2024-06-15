@@ -1,5 +1,5 @@
 import { FacebookOutlined, GTranslate, PlayCircleFilled, ApiOutlined } from "@mui/icons-material";
-import { PartnersItem } from "./types";
+import { PartnersItem, PriceCardProps } from "./types";
 
 export const navLinks = [
   { label: "Home", path: "/" },
@@ -14,6 +14,21 @@ export const partners: PartnersItem[] = [
   { icon: <GTranslate />, title: "Gugel Translate" },
   { icon: <PlayCircleFilled />, title: "yusubs" },
   { icon: <ApiOutlined />, title: "Bandung Lautan API" },
+];
+
+export const packages: PriceCardProps[] = [
+  {
+    title: "Professional",
+    price: "4.999",
+    description: "Good for freelancer having 5-15 clients per month about twice.",
+    benefits: ["Real tracking behavior", "100 GB file-size documents", "24/7 customer support", "Quick invoicing modules"],
+  },
+  {
+    title: "For Team",
+    price: "18.500",
+    description: "Good for teams having 30 clients per month about twice.",
+    benefits: ["Real tracking behavior", "100 GB file-size documents", "24/7 customer support", "Quick invoicing modules", "Anti fraud payments", "Legal support backed", "LMS for demo features", "More coming soon"],
+  },
 ];
 
 export const HowItWorksData: string[] = [
