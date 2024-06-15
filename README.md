@@ -1,5 +1,5 @@
 # Website Overview ( ReactTs-vite-MUI)
-![image](https://github.com/ikhlasdansantai/slicing-with-mui/assets/95151018/ca24ad76-1128-4b58-8278-9bc4019e1ef1)
+![image](https://github.com/ikhlasdansantai/slicing-with-mui/assets/95151018/1d2db900-2415-401f-ae3c-bf26a8c6025e)
 
 Memang benar kata pepatah, typescript itu ribet, tapi ketika kamu udah coba typescript, maka akan muncul rasa nyaman disetiap ketikan keyboardnya.
 
