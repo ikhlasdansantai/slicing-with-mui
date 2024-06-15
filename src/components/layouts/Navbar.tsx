@@ -12,7 +12,7 @@ export default function Navbar() {
       </Box>
       <Box component="li" className="nav-item" display="flex" justifyContent="space-between" alignItems="center" gap={3}>
         {navLinks.map((link) => (
-          <Box component="li" color={"ascent.dark"} sx={{ fontWeight: router === link.path ? "bold" : "regular", cursor: "pointer" }} key={link.label}>
+          <Box component="li" color={"ascent.dark"} sx={{ fontWeight: router === link.path ? "bold" : "regular", fontSize: "18px", cursor: "pointer" }} key={link.label}>
             {link.label}
           </Box>
         ))}
