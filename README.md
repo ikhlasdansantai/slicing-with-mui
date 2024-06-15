@@ -1,4 +1,10 @@
-# React + TypeScript + Vite
+# Website Overview ( ReactTs-vite-MUI)
+![image](https://github.com/ikhlasdansantai/slicing-with-mui/assets/95151018/ca24ad76-1128-4b58-8278-9bc4019e1ef1)
+
+Memang benar kata pepatah, typescript itu ribet, tapi ketika kamu udah coba typescript, maka akan muncul rasa nyaman disetiap ketikan keyboardnya.
+
+## Kalo kamu mau cloning, gak tau nih cek aja di bawah caranya.
+Btw, web ini belum responsive yak, nanti klo udah responsive dikabarin, dan sebenernya belum 100% jadi juga, karena ada beberapa bagian yang harus di refactor, dari sisi kodenya, supaya menimbulkan rasa harmonis ketika ada orang yang liat kode nya, udah segitu aja, selamat malam, jangan lupa tidur.
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
