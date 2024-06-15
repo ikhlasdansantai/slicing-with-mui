@@ -9,5 +9,3 @@ export interface PriceCardProps {
   description: string;
   benefits: string[];
 }
-
-// config: menampung semua types yang dibutuhkan oleh typescript
