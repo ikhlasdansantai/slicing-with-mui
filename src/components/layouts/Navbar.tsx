@@ -7,10 +7,10 @@ export default function Navbar() {
 
   return (
     <Box component="nav" display="flex" justifyContent="space-between" alignItems="center" py={4}>
-      <Box component="figure">
-        <img src={Images.logo} alt="logo" />
+      <Box component="figure" sx={{ maxWidth: { xs: "10rem", lg: "15rem" } }}>
+        <img src={Images.logo} alt="logo" className="img" />
       </Box>
-      <Box component="li" className="nav-item" display="flex" justifyContent="space-between" alignItems="center" gap={3}>
+      <Box component="ul" className="nav-item" gap={3} sx={{ display: { xs: "none", md: "flex" } }}>
         {navLinks.map((link) => (
           <Box component="li" color={"ascent.dark"} sx={{ fontWeight: router === link.path ? "bold" : "regular", fontSize: "18px", cursor: "pointer" }} key={link.label}>
             {link.label}

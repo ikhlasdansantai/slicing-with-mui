@@ -13,12 +13,10 @@ export default function Pricing() {
               Good Invesment
             </Button>
             <Typography variant="h3" component="h2" fontWeight="bold">
-              Most Friendly Pricing
-              <br /> Plans For Everyone
+              Most Friendly Pricing Plans For Everyone
             </Typography>
             <Typography variant="h6" component="h4">
-              We designed a lot of features that can applied
-              <br /> automatically so you do not have to run.
+              We designed a lot of features that can applied automatically so you do not have to run.
             </Typography>
             <Grid container gap={3}>
               {partners.map((partner) => (
@@ -43,8 +41,8 @@ export default function Pricing() {
           </Grid>
 
           <Grid container item xs={12} md={6.5} gap={1} justifyContent="space-between" component="article">
-            {packages.map((packageItem) => (
-              <PriceCard key={packageItem.title} {...packageItem} />
+            {packages.map((data, index) => (
+              <PriceCard key={index} {...data} />
             ))}
           </Grid>
         </Grid>
@@ -55,33 +53,31 @@ export default function Pricing() {
 
 function PriceCard({ title, price, description, benefits }: PriceCardProps) {
   return (
-    <>
-      <Grid item lg={5.8}>
-        <Box borderRadius={4} p={4} bgcolor="background.default" sx={{ display: "flex", flexDirection: "column", gap: 2, alignItems: "start" }}>
-          <Typography>{title}</Typography>
-          <Box display="flex" alignItems="center" gap={0.5}>
-            <Typography variant="h3" component="h3" fontWeight="bold">
-              ${price}
-            </Typography>
-            <Typography>/month</Typography>
-          </Box>
-          <Typography>{description}.</Typography>
-
-          <Box component="ul" display="flex" flexDirection="column" gap={2}>
-            {benefits.map((benefit: string, index: number) => (
-              <Box component="li" display="flex" alignItems="center" gap={1}>
-                <CheckCircleOutlined color={index < 4 ? "secondary" : "primary"} />
-                <Typography variant="h6" component="h3" fontWeight="bold">
-                  {benefit}
-                </Typography>
-              </Box>
-            ))}
-          </Box>
-          <Button variant="contained" size="large" sx={{ bgcolor: `${title === "Professional" ? "ascent.dark" : "ascent"}`, textTransform: "none", borderRadius: 2, width: "100%" }}>
-            Get Package
-          </Button>
+    <Grid item lg={5.8}>
+      <Box borderRadius={4} p={4} bgcolor="background.default" sx={{ display: "flex", flexDirection: "column", gap: 2, alignItems: "start" }}>
+        <Typography>{title}</Typography>
+        <Box display="flex" alignItems="center" gap={0.5}>
+          <Typography variant="h3" component="h3" fontWeight="bold">
+            ${price}
+          </Typography>
+          <Typography>/month</Typography>
         </Box>
-      </Grid>
-    </>
+        <Typography>{description}.</Typography>
+
+        <Box component="ul" display="flex" flexDirection="column" gap={2}>
+          {benefits.map((benefit: string, index: number) => (
+            <Box key={index} component="li" display="flex" alignItems="center" gap={1}>
+              <CheckCircleOutlined color={index < 4 ? "secondary" : "primary"} />
+              <Typography variant="h6" component="h3" fontWeight="bold">
+                {benefit}
+              </Typography>
+            </Box>
+          ))}
+        </Box>
+        <Button variant="contained" size="large" sx={{ bgcolor: `${title === "Professional" ? "ascent.dark" : "ascent"}`, textTransform: "none", borderRadius: 2, width: "100%" }}>
+          Get Package
+        </Button>
+      </Box>
+    </Grid>
   );
 }

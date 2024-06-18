@@ -10,8 +10,7 @@ export default function Features() {
         </Button>
         <Typography variant="h3" component="h2" fontWeight="bold">
           Built-in Robust Features
-          <br />
-          Versatile Purposes
+          <br /> Versatile Purposes
         </Typography>
         <FeatureGrids />
       </Container>

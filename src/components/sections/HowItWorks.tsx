@@ -1,21 +1,18 @@
 import { Box, Button, Container, Grid, Typography } from "@mui/material";
 import Images from "../../constants/Images";
-import { useState } from "react";
 import { CheckCircleOutlined, PlayCircleFilledOutlined } from "@mui/icons-material";
 import { HowItWorksData } from "../../datas";
 
 const images = [Images.watch1, Images.watch2, Images.watch3, Images.watch4];
 const ayangs = [Images.ayang1, Images.ayang2, Images.ayang3];
 export default function HowItWorks() {
-  const [index, setIndex] = useState<any>(images[0]);
-
   return (
     <Container component="section" maxWidth="xl" sx={{ py: 10 }}>
       <Grid container justifyContent="space-between" alignItems="center">
         <Grid container item xs={12} md={5} alignItems="center">
           <Grid item md={12} className="watch__featured">
             <Box component="figure" position="relative">
-              <img src={index} alt="Hero Illustrations Image" style={{ width: "100%" }} />
+              <img src={images[0]} alt="Hero Illustrations Image" style={{ width: "100%" }} />
               <Box position="absolute" sx={{ top: "40px", left: "-25px", bottom: "0", right: "40px", zIndex: -1 }}>
                 <img src={Images.watchBg} alt="Hero Illustrations Image" style={{ width: "100%" }} />
               </Box>
@@ -36,13 +33,13 @@ export default function HowItWorks() {
           </Grid>
           <Grid container item md={12} justifyContent="space-between" mt={5}>
             <Grid item lg={3.7}>
-              <img src={images[2]} alt="Hero Illustrations Image" className="img" />
+              <img src={images[1]} alt="Hero Illustrations Image" className="img" />
             </Grid>
             <Grid item lg={3.7}>
               <img src={images[2]} alt="Hero Illustrations Image" className="img" />
             </Grid>
             <Grid item lg={3.7}>
-              <img src={images[2]} alt="Hero Illustrations Image" className="img" />
+              <img src={images[3]} alt="Hero Illustrations Image" className="img" />
             </Grid>
           </Grid>
         </Grid>
@@ -55,8 +52,7 @@ export default function HowItWorks() {
             Watch How It Works
           </Typography>
           <Typography variant="h6" component="h4">
-            We designed a lot of features that can applied
-            <br /> automatically so you do not have to run.
+            We designed a lot of features that can applied <br /> automatically so you do not have to run.
           </Typography>
 
           <Box component="ul" display="flex" flexDirection="column" gap={2}>
