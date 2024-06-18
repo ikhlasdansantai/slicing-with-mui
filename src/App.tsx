@@ -6,6 +6,8 @@ import Brands from "./components/sections/Brands";
 import Features from "./components/sections/Features";
 import HowItWorks from "./components/sections/HowItWorks";
 import Pricing from "./components/sections/Pricing";
+import Testimonials from "./components/sections/Testimonials";
+import Footer from "./components/layouts/Footer";
 
 function App() {
   return (
@@ -18,6 +20,8 @@ function App() {
       <Features />
       <HowItWorks />
       <Pricing />
+      <Testimonials />
+      <Footer />
     </Box>
   );
 }
