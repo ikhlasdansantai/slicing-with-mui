@@ -1,6 +1,5 @@
-import { createTheme } from "@mui/material/styles";
+import { createTheme, responsiveFontSizes } from "@mui/material/styles";
 
-// A custom theme for this app
 const theme = createTheme({
   palette: {
     primary: {
@@ -22,6 +21,21 @@ const theme = createTheme({
       paper: "#EDEEF2",
     },
   },
+  breakpoints: {
+    values: {
+      xs: 0,
+      smallPhone: 350,
+      sm: 600,
+      md: 860,
+      lg: 1200,
+      xl: 1536,
+    },
+  },
+  typography: {
+    h1: {
+      fontSize: 80,
+    },
+  },
 });
 
-export default theme;
+export default responsiveFontSizes(theme);
