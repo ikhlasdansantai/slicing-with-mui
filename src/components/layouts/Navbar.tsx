@@ -6,7 +6,7 @@ export default function Navbar() {
   const router = window.location.pathname;
 
   return (
-    <Box component="nav" display="flex" justifyContent="space-between" alignItems="center" p={4}>
+    <Box component="nav" display="flex" justifyContent="space-between" alignItems="center" pt={3.5} px={2} pb={2}>
       <Box
         component="figure"
         sx={{
