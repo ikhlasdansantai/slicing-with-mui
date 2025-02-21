@@ -5,10 +5,27 @@ import { PriceCardProps } from "../../types";
 
 export default function Pricing() {
   return (
-    <Box component="section" sx={{ mt: 6, bgcolor: "background.paper" }} py={10}>
-      <Container component="section" maxWidth="xl" sx={{ display: "flex", flexDirection: "column", gap: 6, alignItems: "start" }}>
-        <Grid container justifyContent="space-between" alignItems="start" gap={1}>
-          <Grid item xs={12} md={5.2} lg={5} component="article" display="flex" flexDirection="column" alignItems="start" gap={4}>
+    <Box
+      component="section"
+      py={10}
+      sx={{
+        mt: 6,
+        bgcolor: "background.paper",
+      }}
+    >
+      <Container
+        component="section"
+        maxWidth="xl"
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+          gap: 6,
+          alignItems: "start",
+        }}
+      >
+        <Grid container justifyContent="space-between" alignItems="start" gap={1} rowGap={10}>
+          <Grid item component="article" display="flex" flexDirection="column" alignItems="start" gap={4} xs={12} md={5.2}>
+            lg={5}
             <Button variant="contained" sx={{ bgcolor: "ascent", textTransform: "none", borderRadius: 12 }}>
               Good Invesment
             </Button>
@@ -40,7 +57,7 @@ export default function Pricing() {
             </Grid>
           </Grid>
 
-          <Grid container item xs={12} md={6.5} gap={1} justifyContent="space-between" component="article">
+          <Grid container item xs={12} md={6.5} gap={2} justifyContent="space-between" component="article">
             {packages.map((data, index) => (
               <PriceCard key={index} {...data} />
             ))}
@@ -53,8 +70,18 @@ export default function Pricing() {
 
 function PriceCard({ title, price, description, benefits }: PriceCardProps) {
   return (
-    <Grid item lg={5.8}>
-      <Box borderRadius={4} p={4} bgcolor="background.default" sx={{ display: "flex", flexDirection: "column", gap: 2, alignItems: "start" }}>
+    <Grid item sx={{ width: "100%" }} lg={5.8}>
+      <Box
+        borderRadius={4}
+        p={4}
+        bgcolor="background.default"
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+          gap: 2,
+          alignItems: "start",
+        }}
+      >
         <Typography>{title}</Typography>
         <Box display="flex" alignItems="center" gap={0.5}>
           <Typography variant="h3" component="h3" fontWeight="bold">
@@ -74,7 +101,16 @@ function PriceCard({ title, price, description, benefits }: PriceCardProps) {
             </Box>
           ))}
         </Box>
-        <Button variant="contained" size="large" sx={{ bgcolor: `${title === "Professional" ? "ascent.dark" : "ascent"}`, textTransform: "none", borderRadius: 2, width: "100%" }}>
+        <Button
+          variant="contained"
+          size="large"
+          sx={{
+            bgcolor: `${title === "Professional" ? "ascent.dark" : "ascent"}`,
+            textTransform: "none",
+            borderRadius: 2,
+            width: "100%",
+          }}
+        >
           Get Package
         </Button>
       </Box>
